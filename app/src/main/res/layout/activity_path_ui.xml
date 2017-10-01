@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Km"
+        android:textSize="15dp"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        mapbox:layout_constraintLeft_toRightOf="@+id/distanceText"
+        android:layout_marginLeft="7dp" />
+
+    <TextView
+        android:id="@+id/distanceText"
+        android:layout_width="67dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/speedText"
+        android:layout_column="6"
+        android:layout_marginEnd="302dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="302dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_row="0"
+        android:layout_toEndOf="@+id/Recording"
+        android:layout_toRightOf="@+id/Recording"
+        android:layout_weight="0.02"
+        android:autoText="false"
+        android:background="@android:color/transparent"
+        android:text="0.00"
+        android:textAlignment="textEnd"
+        android:textColor="?attr/actionMenuTextColor"
+        android:textSize="22dp"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintLeft_toLeftOf="parent"
+        mapbox:layout_constraintRight_toRightOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/Recording"
+        android:layout_width="94dp"
+        android:layout_height="44dp"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignTop="@+id/button2"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="0.12"
+        android:background="@android:color/transparent"
+        android:scrollbarStyle="insideOverlay"
+        android:switchMinWidth="30dp"
+        android:switchPadding="5dp"
+        android:text="Off"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#7a7a7a"
+        android:textColorLink="@android:color/holo_green_light"
+        android:textSize="18sp"
+        mapbox:layout_constraintRight_toRightOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="288dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="51dp"
+        android:background="@android:color/white"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintLeft_toLeftOf="parent"
+        mapbox:layout_constraintRight_toRightOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/speedText"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_below="@+id/lastUpdatedText"
+            android:layout_marginLeft="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="93dp"
+            android:layout_toEndOf="@+id/distanceText"
+            android:layout_toRightOf="@+id/distanceText"
+            android:layout_weight="0.01"
+            android:autoText="false"
+            android:background="#4b5379f8"
+            android:text="0.00"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="22dp"
+            mapbox:layout_constraintLeft_toLeftOf="parent"
+            mapbox:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/DeleteButton"
+        android:layout_width="88dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="296dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="461dp"
+        android:onClick="deletePath"
+        android:text="delete"
+        android:textAllCaps="false"
+        android:textColor="#7a7a7a"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintLeft_toLeftOf="parent"
+        mapbox:layout_constraintRight_toRightOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lastUpdatedText"
+        android:layout_width="379dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/speedLabel"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="233dp"
+        android:layout_weight="0.02"
+        android:autoText="false"
+        android:background="#00807f7f"
+        android:text="Never Updated"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp"
+        mapbox:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintLeft_toLeftOf="parent"
+        mapbox:layout_constraintRight_toRightOf="@+id/Recording"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/centerButton"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/locate"
+        mapbox:layout_constraintLeft_toLeftOf="parent"
+        mapbox:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="1dp"
+        tools:layout_editor_absoluteX="178dp"
+        mapbox:layout_constraintHorizontal_bias="0.501" />
+
+
+</android.support.constraint.ConstraintLayout>
